@@ -92,7 +92,7 @@ def add_to_text_area(index):
     if f'result-{index}' in st.session_state:
         st.session_state[f'textarea-{index}'] = st.session_state[f'result-{index}']
 
-service = st.sidebar.selectbox("Pick a Service", ("Report AI", "PDf AI", "Chating AI"))
+service = st.sidebar.selectbox("Pick a Service", ("Report AI", "PDF AI", "Chatting AI"))
 response = gen_ai_service(service)
 container = st.container()
 response = gen_ai_service(service)
