@@ -1,4 +1,4 @@
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 from langchain.llms import OpenAI
 from langchain.chat_models import ChatOpenAI
 from langchain.prompts import (
@@ -16,7 +16,7 @@ from langchain.schema import (
 from langchain.callbacks.base import BaseCallbackHandler
 import streamlit as st
 
-load_dotenv()
+# load_dotenv()
 
 template = """
 1. 당신은 기업 ESG 보고서 작성하는 전문가 입니다.
