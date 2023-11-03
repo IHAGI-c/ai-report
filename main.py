@@ -83,7 +83,7 @@ def generate_report(index):
     current_text = st.session_state.get(f'textarea-{index}', '')
     chat_box = st.empty()
     stream_handler = StreamHandler(chat_box)
-    llm = ChatOpenAI(model_name="gpt-4", temperature=1, streaming=True, callbacks=[stream_handler], max_tokens=500)
+    llm = ChatOpenAI(model_name="gpt-4", temperature=1, streaming=True, callbacks=[stream_handler], max_tokens=600)
     chat_prompt_instance = chat_prompt.format_prompt(DS=DS_list[index]['DS'], lang=DS_list[index]['lang'], text=current_text)
     answer = llm(chat_prompt_instance.to_messages())
     st.session_state[f'result-{index}'] = answer
